@@ -1,0 +1,58 @@
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  color: $theme-color;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px $theme-color;
+  transition: all 1s;
+  transform: translate(-50%, -50%);
+
+  .icons-wrap {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    content: 'hello';
+    transition: all 1s;
+    transform: translateX(-50%);
+  }
+
+  &:hover::before {
+    left: -20px;
+  }
+
+  &::after {
+    position: absolute;
+    right: -35px;
+    content: '您好';
+    transition: all 1s;
+  }
+
+  &:hover::after {
+    right: 40%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px 1px $theme-color;
+  }
+}
