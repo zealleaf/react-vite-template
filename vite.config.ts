@@ -62,10 +62,10 @@ export default ({ mode }) => {
     // 插件
     plugins: [
       react(),
+      viteEslint(),
       viteStylelint({
         exclude: /dist|node_modules/
       }),
-      viteEslint(),
       svgr(),
       viteImagemin({
         gifsicle: {
