@@ -12,8 +12,7 @@ const variablePath = normalizePath(path.resolve('./src/variable.scss'));
 
 export default ({ mode }) => {
   const isProduction = mode === 'production' ? true : false;
-  console.log('生产模式？' + isProduction);
-
+  
   return defineConfig({
     server: {
       proxy: {
